@@ -225,149 +225,472 @@ button:hover,
     }
 
 }
+
+html{
+    scroll-behavior:smooth;
+}
 </style>
 </head>
 
-<body class="text-white">
+<body class="text-white overflow-x-hidden">
 
-<!-- BACKGROUND -->
-<div class="absolute top-10 left-10 glow bg-indigo-600"></div>
-<div class="absolute bottom-10 right-10 glow bg-blue-600"></div>
+  <!-- NAVBAR -->
+<nav class="fixed top-0 left-0 w-full z-50 backdrop-blur-xl bg-[#070A12]/80 border-b border-white/10">
 
-<!-- HERO -->
-<section class="text-center pt-16 sm:pt-20 px-4 sm:px-6 max-w-4xl mx-auto">
+    <div class="max-w-6xl mx-auto px-5 py-4 flex justify-between items-center">
 
-  <div class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 mx-auto rounded-full overflow-hidden border-2 border-indigo-500 anim">
-    <img src="Malek.png" class="w-full h-full object-cover">
-  </div>
+        <!-- Logo -->
+        <a href="#" class="text-xl md:text-2xl font-black gradient">
+            مالك سامح
+        </a>
 
-<h1 class="text-3xl sm:text-4xl md:text-5xl font-black mt-6 anim gradient">
-      مالك سامح
-  </h1>
+        <!-- Menu -->
+        <ul class="hidden md:flex items-center gap-8 text-gray-300">
 
-  <p class="text-indigo-300 mt-3 text-base sm:text-lg md:text-xl anim">
-    Web Developer
-  </p>
+            <li>
+                <a href="#home" class="hover:text-indigo-300 transition">
+                    الرئيسية
+                </a>
+            </li>
 
-  <p class="text-gray-400 mt-4 text-sm sm:text-base anim">
-    27 ش المدرسة - إمبابة
-  </p>
+            <li>
+                <a href="#about" class="hover:text-indigo-300 transition">
+                    نبذة
+                </a>
+            </li>
 
-  <!-- CONTACT LINKS + WHATSAPP -->
-  <div class="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-3 mt-6 text-sm text-gray-300 anim">
+            <li>
+                <a href="#skills" class="hover:text-indigo-300 transition">
+                    المهارات
+                </a>
+            </li>
 
-    <!-- Email -->
-    <a href="mailto:maleksameh121@gmail.com" class="hover:text-indigo-300 transition">
-      📧 Email
-    </a>
+            <li>
+                <a href="#projects" class="hover:text-indigo-300 transition">
+                    المشاريع
+                </a>
+            </li>
 
-    <!-- Phone -->
-    <a href="tel:01117964294" class="hover:text-indigo-300 transition">
-      📞 Phone
-    </a>
+            <li>
+                <a href="#contact" class="hover:text-indigo-300 transition">
+                    تواصل
+                </a>
+            </li>
 
-    <!-- GitHub -->
-    <a href="https://github.com/maleksameh121-web" target="_blank" class="hover:text-indigo-300 transition">
-      🔗 GitHub
-    </a>
+        </ul>
 
-    <!-- WhatsApp Hire Me -->
-    <a 
-      href="https://wa.me/201117964294"
-      target="_blank"
-      class="w-full sm:w-auto px-6 py-3 bg-green-500 text-white rounded-xl hover:scale-105 transition font-semibold shadow-md text-center"
-    >
-      💬 Hire Me
-    </a>
+        <!-- Hire Me -->
+        <a href="https://wa.me/201117964294"
+            target="_blank"
+            class="hidden md:block bg-indigo-600 hover:bg-indigo-500 transition px-5 py-2 rounded-xl font-semibold">
 
-  </div>
+            Hire Me
 
-</section>
+        </a>
 
-<!-- ABOUT -->
-<section class="max-w-5xl mx-auto px-4 sm:px-6">
+    </div>
 
-  <div class="glass p-8 rounded-3xl">
-    <h2 class="text-2xl font-bold text-indigo-300 mb-4">لمحة شخصية</h2>
+</nav>
 
-    <p class="text-gray-300 leading-8 text-sm sm:text-base">
-      مطور برمجيات مع خبرة في تطوير التطبيقات والحلول التقنية.
-      أمتلك شغفاً كبيراً بالتكنولوجيا والابتكار، وأسعى دائماً لتقديم حلول برمجية متميزة تلبي احتياجات العملاء بأعلى معايير الجودة.
-      لدي خبرة عملية في العمل المؤسسي وإدارة المشاريع التقنية من البداية حتى التسليم.
+    <!-- BACKGROUND -->
+    <div class="absolute top-10 left-10 glow bg-indigo-600"></div>
+    <div class="absolute bottom-10 right-10 glow bg-blue-600"></div>
+
+    <!-- HERO -->
+    <section id="home" class="text-center pt-32 sm:pt-36 px-4 sm:px-6 max-w-4xl mx-auto">
+
+        <div class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 mx-auto rounded-full overflow-hidden border-2 border-indigo-500 anim">
+            <img src="Malek.png" alt="Malek Sameh" class="w-full h-full object-cover">
+        </div>
+
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-black mt-6 anim gradient">
+            مالك سامح
+        </h1>
+
+        <p class="text-indigo-300 mt-3 text-base sm:text-lg md:text-xl anim">
+            Web Developer
+        </p>
+
+        <p class="text-gray-400 mt-4 text-sm sm:text-base anim">
+            27 ش المدرسة - إمبابة
+        </p>
+
+        <!-- CONTACT -->
+        <div class="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-3 mt-8 text-sm text-gray-300 anim">
+
+            <a href="mailto:maleksameh121@gmail.com"
+                class="hover:text-indigo-300 transition">
+                📧 Email
+            </a>
+
+            <a href="tel:01117964294"
+                class="hover:text-indigo-300 transition">
+                📞 Phone
+            </a>
+
+            <a href="https://github.com/maleksameh121-web"
+                target="_blank"
+                class="hover:text-indigo-300 transition">
+                🔗 GitHub
+            </a>
+
+            <a href="https://wa.me/201117964294"
+                target="_blank"
+                class="w-full sm:w-auto px-6 py-3 bg-green-500 rounded-xl text-center font-semibold hover:bg-green-600 transition">
+                💬 Hire Me
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="max-w-5xl mx-auto px-4 sm:px-6 mt-20">
+
+        <div class="glass p-6 sm:p-8 rounded-3xl">
+
+            <h2 class="text-2xl font-bold text-indigo-300 mb-5">
+                لمحة شخصية
+            </h2>
+
+            <p class="text-gray-300 leading-8 text-sm sm:text-base">
+                مطور برمجيات مع خبرة في تطوير التطبيقات والحلول التقنية.
+                أمتلك شغفاً كبيراً بالتكنولوجيا والابتكار، وأسعى دائماً لتقديم حلول برمجية متميزة تلبي احتياجات العملاء بأعلى معايير الجودة.
+                لدي خبرة عملية في العمل المؤسسي وإدارة المشاريع التقنية من البداية حتى التسليم.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="max-w-5xl mx-auto px-4 sm:px-6 mt-16">
+
+        <h2 class="text-2xl font-bold text-indigo-300 mb-6">
+            المهارات
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+            <div class="glass p-6 rounded-2xl">
+
+                <h3 class="mb-4 text-indigo-300 font-semibold">
+                    مهارات تقنية
+                </h3>
+
+                <div class="flex flex-wrap justify-center md:justify-start gap-2 text-sm text-gray-300">
+
+                    <span>HTML / CSS</span>
+                    <span>JavaScript (ES6+)</span>
+                    <span>React.js</span>
+                    <span>Responsive Design</span>
+                    <span>RESTful APIs</span>
+
+                </div>
+
+            </div>
+
+            <div class="glass p-6 rounded-2xl">
+
+                <h3 class="mb-4 text-indigo-300 font-semibold">
+                    مهارات وخدمات
+                </h3>
+
+                <div class="flex flex-wrap justify-center md:justify-start gap-2 text-sm text-gray-300">
+
+                    <span>عمل مواقع ومنصات</span>
+                    <span>شرح منصة كيرو</span>
+                    <span>شرح الذكاء الاصطناعي</span>
+                    <span>أبحاث علمية</span>
+                    <span>إدارة الوقت والعمل الجماعي</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+<!-- PROJECTS -->
+<section id="projects" class="max-w-6xl mx-auto px-4 sm:px-6 mt-20">
+
+    <h2 class="text-3xl font-bold text-center gradient mb-4">
+        مشاريعي
+    </h2>
+
+    <p class="text-center text-gray-400 mb-12">
+        مجموعة من المشاريع التي قمت بتطويرها في مجال المنصات التعليمية وإدارة المحتوى.
     </p>
-  </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- مشروع 1 -->
+        <div class="glass rounded-3xl overflow-hidden hover:scale-105 transition duration-300">
+
+            <img src="projects/zad.jpg"
+                alt="منصة زاد المعرفة"
+                class="w-full h-56 object-cover">
+
+            <div class="p-6">
+
+                <h3 class="text-2xl font-bold text-indigo-300">
+                    منصة زاد المعرفة
+                </h3>
+
+                <p class="text-gray-400 mt-3 leading-7">
+                    منصة تعليمية متكاملة لإدارة الدورات والطلاب، تشمل تسجيل الطلاب، متابعة التقدم، الاختبارات الإلكترونية، وإصدار الشهادات.
+                </p>
+
+                <div class="flex flex-wrap gap-2 mt-5">
+                    <span class="bg-indigo-600 px-3 py-1 rounded-full text-sm">HTML</span>
+                    <span class="bg-indigo-600 px-3 py-1 rounded-full text-sm">CSS</span>
+                    <span class="bg-indigo-600 px-3 py-1 rounded-full text-sm">JavaScript</span>
+                    <span class="bg-indigo-600 px-3 py-1 rounded-full text-sm">Responsive</span>
+                </div>
+
+                <div class="flex gap-3 mt-6">
+                    <a href="#" class="flex-1 bg-indigo-600 text-center py-2 rounded-xl hover:bg-indigo-500 transition">
+                        Live Demo
+                    </a>
+
+                    <a href="#" class="flex-1 border border-indigo-500 text-center py-2 rounded-xl hover:bg-indigo-600 transition">
+                        GitHub
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- مشروع 2 -->
+        <div class="glass rounded-3xl overflow-hidden hover:scale-105 transition duration-300">
+
+            <img src="projects/bac.png"
+                alt="مكتبة تانية بكالوريا"
+                class="w-full h-56 object-cover">
+
+            <div class="p-6">
+
+                <h3 class="text-2xl font-bold text-indigo-300">
+                    مكتبة تانية بكالوريا
+                </h3>
+
+                <p class="text-gray-400 mt-3 leading-7">
+                    موقع إلكتروني لعرض وبيع الكتب والمذكرات التعليمية، يتميز بتصميم عصري، سرعة عالية، وتجربة استخدام متوافقة مع جميع الأجهزة.
+                </p>
+
+                <div class="flex flex-wrap gap-2 mt-5">
+                    <span class="bg-indigo-600 px-3 py-1 rounded-full text-sm">HTML</span>
+                    <span class="bg-indigo-600 px-3 py-1 rounded-full text-sm">CSS</span>
+                    <span class="bg-indigo-600 px-3 py-1 rounded-full text-sm">JavaScript</span>
+                </div>
+
+                <div class="flex gap-3 mt-6">
+                    <a href="https://zadalmrfh-create.github.io/LibraryThe-Distinguished/" class="flex-1 bg-indigo-600 text-center py-2 rounded-xl hover:bg-indigo-500 transition">
+                        Live Demo
+                    </a>
+
+                    <a href="https://zadalmrfh-create.github.io/LibraryThe-Distinguished/" class="flex-1 border border-indigo-500 text-center py-2 rounded-xl hover:bg-indigo-600 transition">
+                        GitHub
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- مشروع 3 -->
+        <div class="glass rounded-3xl overflow-hidden hover:scale-105 transition duration-300">
+
+            <img src="projects/hadi.jpg"
+                alt="منصة الشيخ هادي"
+                class="w-full h-56 object-cover">
+
+            <div class="p-6">
+
+                <h3 class="text-2xl font-bold text-indigo-300">
+                    منصة الشيخ هادي
+                </h3>
+
+                <p class="text-gray-400 mt-3 leading-7">
+                    منصة تعليمية متخصصة في العلوم الشرعية، تضم الدورات، الدروس، متابعة الطلاب، ولوحة تحكم متكاملة لإدارة المحتوى.
+                </p>
+
+                <div class="flex flex-wrap gap-2 mt-5">
+                    <span class="bg-indigo-600 px-3 py-1 rounded-full text-sm">React</span>
+                    <span class="bg-indigo-600 px-3 py-1 rounded-full text-sm">Tailwind CSS</span>
+                    <span class="bg-indigo-600 px-3 py-1 rounded-full text-sm">JavaScript</span>
+                </div>
+
+                <div class="flex gap-3 mt-6">
+                    <a href="https://maleksameh121-web.github.io/Sheikh-Hadey/" class="flex-1 bg-indigo-600 text-center py-2 rounded-xl hover:bg-indigo-500 transition">
+                        Live Demo
+                    </a>
+
+                    <a href="https://maleksameh121-web.github.io/Sheikh-Hadey/" class="flex-1 border border-indigo-500 text-center py-2 rounded-xl hover:bg-indigo-600 transition">
+                        GitHub
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
 
-<!-- SKILLS -->
-<section class="max-w-5xl mx-auto px-4 sm:px-6">
+<i class="fa-brands fa-js text-6xl text-yellow-400 mb-4"></i>
 
-  <h2 class="text-2xl font-bold text-indigo-300 mb-6">المهارات</h2>
+<!-- SERVICES -->
+<section id="services" class="max-w-6xl mx-auto px-4 sm:px-6 mt-20">
 
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <h2 class="text-3xl font-bold text-center gradient mb-4">
+        الخدمات
+    </h2>
 
-    <div class="glass p-6 rounded-2xl">
-      <h3 class="mb-3 text-indigo-300">مهارات تقنية</h3>
-      <div class="flex flex-wrap justify-center md:justify-start gap-2 text-sm text-gray-300">
-        <span>HTML / CSS</span>
-        <span>JavaScript (ES6+)</span>
-        <span>React.js</span>
-        <span>Responsive Design</span>
-        <span>RESTful APIs</span>
-      </div>
+    <p class="text-center text-gray-400 mb-12">
+        أقدم حلولاً برمجية حديثة تساعد في بناء مواقع ومنصات احترافية.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Service 1 -->
+        <div class="glass rounded-3xl p-8 text-center hover:scale-105 transition duration-300">
+
+            <div class="text-5xl mb-5">💻</div>
+
+            <h3 class="text-xl font-bold text-indigo-300 mb-4">
+                تطوير المواقع
+            </h3>
+
+            <p class="text-gray-400 leading-7">
+                تصميم وتطوير مواقع ويب حديثة وسريعة ومتوافقة مع جميع الأجهزة.
+            </p>
+
+        </div>
+
+        <!-- Service 2 -->
+        <div class="glass rounded-3xl p-8 text-center hover:scale-105 transition duration-300">
+
+            <div class="text-5xl mb-5">🎓</div>
+
+            <h3 class="text-xl font-bold text-indigo-300 mb-4">
+                المنصات التعليمية
+            </h3>
+
+            <p class="text-gray-400 leading-7">
+                إنشاء منصات تعليمية متكاملة لإدارة الدورات والطلاب والاختبارات والشهادات.
+            </p>
+
+        </div>
+
+        <!-- Service 3 -->
+        <div class="glass rounded-3xl p-8 text-center hover:scale-105 transition duration-300">
+
+            <div class="text-5xl mb-5">⚡</div>
+
+            <h3 class="text-xl font-bold text-indigo-300 mb-4">
+                تحسين الأداء
+            </h3>
+
+            <p class="text-gray-400 leading-7">
+                تحسين سرعة المواقع وتجربة المستخدم وتهيئة الموقع لمحركات البحث (SEO).
+            </p>
+
+        </div>
+
+        <!-- Service 4 -->
+        <div class="glass rounded-3xl p-8 text-center hover:scale-105 transition duration-300">
+
+            <div class="text-5xl mb-5">📱</div>
+
+            <h3 class="text-xl font-bold text-indigo-300 mb-4">
+                تصميم متجاوب
+            </h3>
+
+            <p class="text-gray-400 leading-7">
+                تصميم مواقع تعمل بكفاءة على الهواتف والأجهزة اللوحية وأجهزة الكمبيوتر.
+            </p>
+
+        </div>
+
+        <!-- Service 5 -->
+        <div class="glass rounded-3xl p-8 text-center hover:scale-105 transition duration-300">
+
+            <div class="text-5xl mb-5">🔗</div>
+
+            <h3 class="text-xl font-bold text-indigo-300 mb-4">
+                ربط APIs
+            </h3>
+
+            <p class="text-gray-400 leading-7">
+                دمج المواقع مع واجهات برمجية وأنظمة دفع وخدمات خارجية بسهولة.
+            </p>
+
+        </div>
+
+        <!-- Service 6 -->
+        <div class="glass rounded-3xl p-8 text-center hover:scale-105 transition duration-300">
+
+            <div class="text-5xl mb-5">🛠️</div>
+
+            <h3 class="text-xl font-bold text-indigo-300 mb-4">
+                الدعم والتطوير
+            </h3>
+
+            <p class="text-gray-400 leading-7">
+                صيانة المواقع وتطويرها وإضافة مميزات جديدة حسب احتياجات العميل.
+            </p>
+
+        </div>
+
     </div>
-
-    <div class="glass p-6 rounded-2xl">
-      <h3 class="mb-3 text-indigo-300">مهارات وخدمات</h3>
-      <div class="flex flex-wrap justify-center md:justify-start gap-2 text-sm text-gray-300">
-        <span>عمل مواقع ومنصات</span>
-        <span>شرح منصة كيرو</span>
-        <span>شرح الذكاء الاصطناعي</span>
-        <span>أبحاث علمية</span>
-        <span>إدارة الوقت والعمل الجماعي</span>
-      </div>
-    </div>
-
-  </div>
 
 </section>
+    <!-- EDUCATION -->
+    <section class="max-w-5xl mx-auto px-4 sm:px-6 mt-16">
 
-<!-- EDUCATION -->
-<section class="max-w-5xl mx-auto px-4 sm:px-6">
+        <h2 class="text-2xl font-bold text-indigo-300 mb-6">
+            التعليم والدورات
+        </h2>
 
-  <h2 class="text-2xl font-bold text-indigo-300 mb-6">التعليم والدورات</h2>
+        <div class="glass p-6 sm:p-8 rounded-3xl text-gray-300 leading-8 text-sm sm:text-base">
 
-  <div class="glass p-6 sm:p-8 rounded-3xl text-gray-300 leading-8 text-sm sm:text-base">
+            <p>حاصل على كورسات في:</p>
 
-    <p>حاصل على كورسات في:</p>
+            <div class="mt-4 flex flex-wrap gap-3">
 
-    <div class="mt-4 flex flex-wrap gap-2">
-      <span>HTML</span>
-      <span>CSS</span>
-      <span>JavaScript</span>
-      <span>React.js</span>
-    </div>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>React.js</span>
 
-    <p class="mt-6">وكذلك:</p>
+            </div>
 
-    <ul class="mt-3 space-y-2">
-      <li>White Board Animation</li>
-      <li>إدارة الوقت</li>
-      <li>محاور النجاح الستة</li>
-      <li>مهارات الإتصال</li>
-      <li>حل المشكلات</li>
-      <li>Responsive Design</li>
-      <li>RESTful APIs</li>
-    </ul>
+            <p class="mt-6">وكذلك:</p>
 
-  </div>
+            <ul class="mt-3 space-y-2">
 
-</section>
+                <li>White Board Animation</li>
+                <li>إدارة الوقت</li>
+                <li>محاور النجاح الستة</li>
+                <li>مهارات الاتصال</li>
+                <li>حل المشكلات</li>
+                <li>Responsive Design</li>
+                <li>RESTful APIs</li>
 
-<!-- FOOTER -->
-<footer class="text-center text-gray-500 text-sm mt-20 pb-10">
-  © 2026 مالك سامح — Web Developer
-</footer>
+            </ul>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="text-center text-gray-500 text-sm mt-20 pb-8 px-4">
+        © 2026 مالك سامح — Web Developer
+    </footer>
 
 </body>
 </html>
