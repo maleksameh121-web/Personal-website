@@ -302,17 +302,19 @@ body.light-mode nav button{
 }
 
 .share-btn {
-    background: linear-gradient(135deg,#6366f1,#3b82f6);
-    color:white;
-    border:none;
-    padding:12px 25px;
-    border-radius:12px;
-    font-size:16px;
-    font-weight:700;
-    cursor:pointer;
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+    color: #fff;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 14px;
+    font-size: 17px;
+    font-family: "Cairo", sans-serif;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s ease;
+    box-shadow: 0 6px 18px rgba(37, 99, 235, 0.35);
 }
 
 .share-btn:hover {
@@ -326,6 +328,25 @@ body.light-mode nav button{
 
 .share-btn span {
     font-size: 20px;
+}
+
+/* Mobile Menu Button Light Mode */
+
+body.light-mode #menuBtn{
+    color:#111827 !important;
+}
+
+body.light-mode #mobileMenu{
+    background:rgba(255,255,255,.95);
+    border-color:rgba(0,0,0,.1);
+}
+
+body.light-mode #mobileMenu a{
+    color:#111827 !important;
+}
+
+body.light-mode #mobileMenu a:hover{
+    color:#4f46e5 !important;
 }
 </style>
 </head>
@@ -360,65 +381,83 @@ class="fixed inset-0 bg-[#070A12] flex flex-col items-center justify-center z-[9
     <div class="max-w-6xl mx-auto px-5 py-4 flex justify-between items-center">
 
         <!-- Logo -->
-        <a href="#" class="text-xl md:text-2xl font-black gradient">
+        <a href="#" class="text-xl font-black gradient">
             مالك سامح
         </a>
 
-        <!-- Menu -->
+
+        <!-- Desktop Menu -->
         <ul class="hidden md:flex items-center gap-8 text-gray-300">
 
-            <li>
-                <a href="#home" class="hover:text-indigo-300 transition">
-                    الرئيسية
-                </a>
-            </li>
-
-            <li>
-                <a href="#about" class="hover:text-indigo-300 transition">
-                    نبذة
-                </a>
-            </li>
-
-            <li>
-                <a href="#skills" class="hover:text-indigo-300 transition">
-                    المهارات
-                </a>
-            </li>
-
-            <li>
-                <a href="#projects" class="hover:text-indigo-300 transition">
-                    المشاريع
-                </a>
-            </li>
-
-            <li>
-                <a href="#achievements" class="hover:text-indigo-300 transition">
-                    الإنجازات
-                </a>
-            </li>
+            <li><a href="#home">الرئيسية</a></li>
+            <li><a href="#about">نبذة</a></li>
+            <li><a href="#skills">المهارات</a></li>
+            <li><a href="#projects">المشاريع</a></li>
+            <li><a href="#achievements">الإنجازات</a></li>
 
         </ul>
 
-        <!-- Hire Me -->
-        <a href="https://wa.me/201117964294"
+
+        <!-- Desktop Buttons -->
+        <div class="hidden md:flex gap-3">
+
+            <a href="سيرة ذاتية .jpeg"
             target="_blank"
-            class="hidden md:block bg-indigo-600 hover:bg-indigo-500 transition px-5 py-2 rounded-xl font-semibold">
+            class="px-5 py-2 bg-indigo-600 rounded-xl">
+                👀 CV
+            </a>
 
-            Hire Me
+            <a href="https://wa.me/201117964294"
+            target="_blank"
+            class="px-5 py-2 bg-green-500 rounded-xl">
+                Hire Me
+            </a>
 
+        </div>
+
+
+        <!-- Mobile Button -->
+<button id="menuBtn"
+class="md:hidden text-3xl text-white transition">
+    ☰
+</button>
+
+
+    </div>
+
+
+    <!-- Mobile Menu -->
+
+    <div id="mobileMenu"
+    class="hidden md:hidden bg-[#070A12]/95 border-t border-white/10 px-5 py-6">
+
+        <a href="#home" class="block py-3">
+            الرئيسية
         </a>
 
-        <button class="share-btn px-6 py-3 rounded-xl" onclick="shareWebsite()">
-    <span>📤</span>
-    مشاركة موقعي
-</button>
-<a href="سيرة ذاتية .jpeg"
-   target="_blank"
-   class="px-6 py-3 bg-indigo-600 rounded-xl hover:bg-indigo-500 transition font-bold shadow-lg">
+        <a href="#about" class="block py-3">
+            نبذة
+        </a>
 
-    👀 View CV
+        <a href="#skills" class="block py-3">
+            المهارات
+        </a>
 
-</a>
+        <a href="#projects" class="block py-3">
+            المشاريع
+        </a>
+
+        <a href="#achievements" class="block py-3">
+            الإنجازات
+        </a>
+
+
+        <a href="سيرة ذاتية .jpeg"
+        class="block mt-4 text-center bg-indigo-600 py-3 rounded-xl">
+            👀 عرض السيرة الذاتية
+        </a>
+
+
     </div>
 
 </nav>
@@ -1722,6 +1761,35 @@ async function shareWebsite(){
     }
 
 }
+
+const menuBtn = document.getElementById("menuBtn");
+const mobileMenu = document.getElementById("mobileMenu");
+
+
+menuBtn.addEventListener("click",()=>{
+
+    mobileMenu.classList.toggle("hidden");
+
+    menuBtn.textContent =
+    mobileMenu.classList.contains("hidden")
+    ? "☰"
+    : "✕";
+
+});
+
+
+// قفل القائمة بعد الضغط على رابط
+
+document.querySelectorAll("#mobileMenu a").forEach(link=>{
+
+    link.addEventListener("click",()=>{
+
+        mobileMenu.classList.add("hidden");
+        menuBtn.textContent="☰";
+
+    });
+
+});
 </script>
 
 
