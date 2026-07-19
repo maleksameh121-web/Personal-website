@@ -28,6 +28,17 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <link rel="icon" type="image/png" href="favicon.png">
+    <meta name="description" content="Portfolio of Malek Sameh - Web Developer specializing in modern websites and educational platforms.">
+
+<meta name="keywords" content="Malek Sameh, Web Developer, React, JavaScript, HTML, CSS, Portfolio">
+
+<meta name="author" content="Malek Sameh">
+
+<meta property="og:title" content="Malek Sameh | Web Developer">
+
+<meta property="og:description" content="Professional Web Developer Portfolio">
+
+<meta property="og:type" content="website">
 <style>
 /* ==========================
    Global
@@ -229,11 +240,93 @@ button:hover,
 html{
     scroll-behavior:smooth;
 }
+
+#typing::after{
+    content:"|";
+    animation: blink .8s infinite;
+}
+
+@keyframes blink{
+    50%{
+        opacity:0;
+    }
+}
+
+/* =======================
+   LIGHT MODE
+======================= */
+
+body.light-mode{
+    background:#f5f7fb;
+    color:#111827;
+}
+
+body.light-mode .glass{
+    background:rgba(255,255,255,.85);
+    border:1px solid rgba(0,0,0,.08);
+    color:#111827;
+}
+
+body.light-mode .text-gray-300{
+    color:#374151 !important;
+}
+
+body.light-mode .text-gray-400{
+    color:#6b7280 !important;
+}
+
+body.light-mode footer{
+    color:#6b7280;
+}
+
+/* ==========================
+   Navbar - Light Mode
+========================== */
+
+body.light-mode nav{
+    background: rgba(255,255,255,.9);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(0,0,0,.08);
+}
+
+body.light-mode nav a{
+    color:#111827 !important;
+}
+
+body.light-mode nav a:hover{
+    color:#4f46e5 !important;
+}
+
+body.light-mode nav button{
+    color:#111827;
+}
 </style>
 </head>
 
 <body class="text-white overflow-x-hidden">
 
+  <!-- Scroll To Top -->
+<button id="scrollTopBtn"
+class="fixed bottom-8 right-8 w-14 h-14 rounded-full bg-indigo-600 text-white text-2xl shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-indigo-500 hover:scale-110 z-50">
+
+    ↑
+
+</button>
+  <!-- Loading Screen -->
+<div id="loader"
+class="fixed inset-0 bg-[#070A12] flex flex-col items-center justify-center z-[9999] transition-all duration-700">
+
+    <div class="w-16 h-16 border-4 border-indigo-500 border-t-transparent rounded-full animate-spin"></div>
+
+    <h2 class="text-3xl font-black gradient mt-8">
+        Malek Sameh
+    </h2>
+
+    <p class="text-gray-400 mt-3">
+        Loading Portfolio...
+    </p>
+
+</div>
   <!-- NAVBAR -->
 <nav class="fixed top-0 left-0 w-full z-50 backdrop-blur-xl bg-[#070A12]/80 border-b border-white/10">
 
@@ -288,6 +381,13 @@ html{
 
         </a>
 
+<a href="سيرة ذاتية .jpeg"
+   target="_blank"
+   class="px-6 py-3 bg-indigo-600 rounded-xl hover:bg-indigo-500 transition font-bold shadow-lg">
+
+    👀 View CV
+
+</a>
     </div>
 
 </nav>
@@ -307,14 +407,19 @@ html{
             مالك سامح
         </h1>
 
-        <p class="text-indigo-300 mt-3 text-base sm:text-lg md:text-xl anim">
-            Web Developer
-        </p>
+<p class="text-indigo-300 mt-3 text-xl font-semibold anim">
+    <span id="typing"></span>
+</p>
 
         <p class="text-gray-400 mt-4 text-sm sm:text-base anim">
             27 ش المدرسة - إمبابة
         </p>
+<button id="themeToggle"
+class="fixed top-6 right-6 w-12 h-12 rounded-full bg-indigo-600 hover:bg-indigo-500 text-white shadow-lg transition z-50">
 
+🌙
+
+</button>
         <!-- CONTACT -->
         <div class="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-3 mt-8 text-sm text-gray-300 anim">
 
@@ -724,6 +829,508 @@ html{
     </div>
 
 </section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="max-w-6xl mx-auto px-4 sm:px-6 mt-20">
+
+    <h2 class="text-3xl font-bold text-center gradient mb-4">
+        الخبرات
+    </h2>
+
+    <p class="text-center text-gray-400 mb-12">
+        خبراتي في تطوير المواقع والمنصات التعليمية.
+    </p>
+
+    <div class="space-y-8">
+
+        <!-- Experience 1 -->
+        <div class="glass rounded-3xl p-8">
+
+            <div class="flex flex-col md:flex-row md:justify-between md:items-center">
+
+                <div>
+
+                    <h3 class="text-2xl font-bold text-indigo-300">
+                        Full Stack Web Developer
+                    </h3>
+
+                    <p class="text-gray-400 mt-2">
+                        Freelance
+                    </p>
+
+                </div>
+
+                <span class="text-indigo-400 mt-3 md:mt-0">
+                    2025 - Present
+                </span>
+
+            </div>
+
+            <ul class="mt-6 space-y-3 text-gray-300 leading-8">
+
+                <li>✔ تطوير منصات تعليمية متكاملة.</li>
+
+                <li>✔ إنشاء لوحات تحكم لإدارة المحتوى.</li>
+
+                <li>✔ تصميم مواقع متجاوبة مع جميع الأجهزة.</li>
+
+                <li>✔ ربط المواقع بواجهات REST APIs.</li>
+
+            </ul>
+
+        </div>
+
+        <!-- Experience 2 -->
+        <div class="glass rounded-3xl p-8">
+
+            <div class="flex flex-col md:flex-row md:justify-between md:items-center">
+
+                <div>
+
+                    <h3 class="text-2xl font-bold text-indigo-300">
+                        Educational Platforms Developer
+                    </h3>
+
+                    <p class="text-gray-400 mt-2">
+                        Personal Projects
+                    </p>
+
+                </div>
+
+                <span class="text-indigo-400 mt-3 md:mt-0">
+                    2024 - Present
+                </span>
+
+            </div>
+
+            <ul class="mt-6 space-y-3 text-gray-300 leading-8">
+
+                <li>✔ تطوير منصة زاد المعرفة.</li>
+
+                <li>✔ تطوير مكتبة تانية بكالوريا.</li>
+
+                <li>✔ تطوير منصة الشيخ هادي.</li>
+
+                <li>✔ تحسين تجربة المستخدم وسرعة المواقع.</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- STATISTICS -->
+<section id="stats" class="max-w-6xl mx-auto px-4 sm:px-6 mt-20">
+
+    <h2 class="text-3xl font-bold text-center gradient mb-4">
+        إحصائياتي
+    </h2>
+
+    <p class="text-center text-gray-400 mb-12">
+        بعض الأرقام التي تعكس خبرتي في تطوير المواقع والمنصات التعليمية.
+    </p>
+
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <!-- Projects -->
+        <div class="glass p-8 rounded-3xl text-center">
+            <h3 class="counter text-5xl font-black text-indigo-400" data-target="10">0</h3>
+            <p class="mt-4 text-gray-300">مشاريع مكتملة</p>
+        </div>
+
+        <!-- Platforms -->
+        <div class="glass p-8 rounded-3xl text-center">
+            <h3 class="counter text-5xl font-black text-indigo-400" data-target="3">0</h3>
+            <p class="mt-4 text-gray-300">منصات تعليمية</p>
+        </div>
+
+        <!-- Students -->
+        <div class="glass p-8 rounded-3xl text-center">
+            <h3 class="counter text-5xl font-black text-indigo-400" data-target="500">0</h3>
+            <p class="mt-4 text-gray-300">طالب</p>
+        </div>
+
+        <!-- Responsive -->
+        <div class="glass p-8 rounded-3xl text-center">
+            <h3 class="counter text-5xl font-black text-indigo-400" data-target="100">0</h3>
+            <p class="mt-4 text-gray-300">% مواقع متجاوبة</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="max-w-6xl mx-auto px-4 sm:px-6 mt-20">
+
+    <h2 class="text-3xl font-bold text-center gradient mb-4">
+        آراء العملاء
+    </h2>
+
+    <p class="text-center text-gray-400 mb-12">
+        بعض آراء العملاء الذين تعاملت معهم.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Review 1 -->
+        <div class="glass p-8 rounded-3xl hover:scale-105 transition duration-300">
+
+            <div class="text-yellow-400 text-xl mb-4">
+                ⭐⭐⭐⭐⭐
+            </div>
+
+            <p class="text-gray-300 leading-8">
+                "تم تنفيذ منصة زاد المعرفة باحترافية وسرعة، وكانت تجربة العمل ممتازة."
+            </p>
+
+            <div class="mt-6">
+                <h4 class="font-bold text-indigo-300">
+                    إدارة منصة زاد المعرفة
+                </h4>
+
+                <span class="text-gray-500 text-sm">
+                    منصة تعليمية
+                </span>
+            </div>
+
+        </div>
+
+        <!-- Review 2 -->
+        <div class="glass p-8 rounded-3xl hover:scale-105 transition duration-300">
+
+            <div class="text-yellow-400 text-xl mb-4">
+                ⭐⭐⭐⭐⭐
+            </div>
+
+            <p class="text-gray-300 leading-8">
+                "الموقع سريع ومتجاوب مع جميع الأجهزة، والتصميم عصري وسهل الاستخدام."
+            </p>
+
+            <div class="mt-6">
+                <h4 class="font-bold text-indigo-300">
+                    مكتبة تانية بكالوريا
+                </h4>
+
+                <span class="text-gray-500 text-sm">
+                   منصة تعليمية
+                </span>
+            </div>
+
+        </div>
+
+        <!-- Review 3 -->
+        <div class="glass p-8 rounded-3xl hover:scale-105 transition duration-300">
+
+            <div class="text-yellow-400 text-xl mb-4">
+                ⭐⭐⭐⭐⭐
+            </div>
+
+            <p class="text-gray-300 leading-8">
+                "تم تطوير المنصة التعليمية بجودة عالية مع الاهتمام بأدق التفاصيل."
+            </p>
+
+            <div class="mt-6">
+                <h4 class="font-bold text-indigo-300">
+                    منصة الشيخ هادي
+                </h4>
+
+                <span class="text-gray-500 text-sm">
+                    منصة تعليمية
+                </span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- WHY CHOOSE ME -->
+<section id="why" class="max-w-6xl mx-auto px-4 sm:px-6 mt-20">
+
+    <h2 class="text-3xl font-bold text-center gradient mb-4">
+        لماذا تختارني؟
+    </h2>
+
+    <p class="text-center text-gray-400 mb-12">
+        أحرص على تقديم حلول برمجية تجمع بين الجودة، السرعة، وسهولة الاستخدام.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Item -->
+        <div class="glass p-8 rounded-3xl text-center hover:scale-105 transition duration-300">
+            <div class="text-5xl mb-4">⚡</div>
+            <h3 class="text-xl font-bold text-indigo-300 mb-3">
+                سرعة التنفيذ
+            </h3>
+            <p class="text-gray-400 leading-7">
+                تنفيذ المشاريع في الوقت المحدد مع الحفاظ على أعلى جودة.
+            </p>
+        </div>
+
+        <!-- Item -->
+        <div class="glass p-8 rounded-3xl text-center hover:scale-105 transition duration-300">
+            <div class="text-5xl mb-4">💻</div>
+            <h3 class="text-xl font-bold text-indigo-300 mb-3">
+                كود نظيف
+            </h3>
+            <p class="text-gray-400 leading-7">
+                كتابة كود منظم وسهل التطوير والصيانة باستخدام أفضل الممارسات.
+            </p>
+        </div>
+
+        <!-- Item -->
+        <div class="glass p-8 rounded-3xl text-center hover:scale-105 transition duration-300">
+            <div class="text-5xl mb-4">📱</div>
+            <h3 class="text-xl font-bold text-indigo-300 mb-3">
+                تصميم متجاوب
+            </h3>
+            <p class="text-gray-400 leading-7">
+                جميع المواقع تعمل بكفاءة على الهاتف والتابلت والكمبيوتر.
+            </p>
+        </div>
+
+        <!-- Item -->
+        <div class="glass p-8 rounded-3xl text-center hover:scale-105 transition duration-300">
+            <div class="text-5xl mb-4">🚀</div>
+            <h3 class="text-xl font-bold text-indigo-300 mb-3">
+                أداء عالي
+            </h3>
+            <p class="text-gray-400 leading-7">
+                تحسين سرعة تحميل الموقع وتجربة المستخدم للحصول على أفضل أداء.
+            </p>
+        </div>
+
+        <!-- Item -->
+        <div class="glass p-8 rounded-3xl text-center hover:scale-105 transition duration-300">
+            <div class="text-5xl mb-4">🔒</div>
+            <h3 class="text-xl font-bold text-indigo-300 mb-3">
+                جودة وأمان
+            </h3>
+            <p class="text-gray-400 leading-7">
+                الاهتمام بأمان الموقع واستقرار الأداء مع اختبار جميع الوظائف.
+            </p>
+        </div>
+
+        <!-- Item -->
+        <div class="glass p-8 rounded-3xl text-center hover:scale-105 transition duration-300">
+            <div class="text-5xl mb-4">🤝</div>
+            <h3 class="text-xl font-bold text-indigo-300 mb-3">
+                دعم مستمر
+            </h3>
+            <p class="text-gray-400 leading-7">
+                متابعة المشروع بعد التسليم وتقديم الدعم الفني والتحديثات عند الحاجة.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="max-w-5xl mx-auto px-4 sm:px-6 mt-20">
+
+    <h2 class="text-3xl font-bold text-center gradient mb-4">
+        الأسئلة الشائعة
+    </h2>
+
+    <p class="text-center text-gray-400 mb-12">
+        إجابات على أكثر الأسئلة التي يطرحها العملاء.
+    </p>
+
+    <div class="space-y-4">
+
+        <details class="glass rounded-2xl p-5 group">
+            <summary class="cursor-pointer font-bold text-lg flex justify-between items-center">
+                كم يستغرق تنفيذ الموقع؟
+                <span class="group-open:rotate-180 transition">⌄</span>
+            </summary>
+
+            <p class="mt-4 text-gray-400 leading-8">
+                تختلف المدة حسب حجم المشروع، ولكن أغلب المواقع يتم تنفيذها خلال أسبوع إلى ثلاثة أسابيع.
+            </p>
+        </details>
+
+        <details class="glass rounded-2xl p-5 group">
+            <summary class="cursor-pointer font-bold text-lg flex justify-between items-center">
+                هل الموقع يعمل على الهاتف؟
+                <span class="group-open:rotate-180 transition">⌄</span>
+            </summary>
+
+            <p class="mt-4 text-gray-400 leading-8">
+                نعم، جميع المواقع التي أقوم بتطويرها متجاوبة بالكامل مع الهواتف والأجهزة اللوحية وأجهزة الكمبيوتر.
+            </p>
+        </details>
+
+        <details class="glass rounded-2xl p-5 group">
+            <summary class="cursor-pointer font-bold text-lg flex justify-between items-center">
+                هل تقدم دعماً بعد التسليم؟
+                <span class="group-open:rotate-180 transition">⌄</span>
+            </summary>
+
+            <p class="mt-4 text-gray-400 leading-8">
+                نعم، أقدم دعماً فنياً بعد تسليم المشروع لضمان عمله بكفاءة والإجابة عن أي استفسارات.
+            </p>
+        </details>
+
+        <details class="glass rounded-2xl p-5 group">
+            <summary class="cursor-pointer font-bold text-lg flex justify-between items-center">
+                ما التقنيات التي تستخدمها؟
+                <span class="group-open:rotate-180 transition">⌄</span>
+            </summary>
+
+            <p class="mt-4 text-gray-400 leading-8">
+                أستخدم HTML5 وCSS3 وJavaScript وReact وTailwind CSS بالإضافة إلى REST APIs لإنشاء مواقع حديثة وسريعة.
+            </p>
+        </details>
+
+    </div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="max-w-6xl mx-auto px-4 sm:px-6 mt-20 mb-20">
+
+    <h2 class="text-3xl font-bold text-center gradient mb-4">
+        تواصل معي
+    </h2>
+
+    <p class="text-center text-gray-400 mb-12">
+        هل لديك فكرة مشروع؟ يسعدني العمل معك وتحويلها إلى موقع احترافي.
+    </p>
+
+    <div class="grid lg:grid-cols-2 gap-8">
+
+        <!-- Contact Info -->
+        <div class="glass rounded-3xl p-8">
+
+            <h3 class="text-2xl font-bold text-indigo-300 mb-8">
+                معلومات التواصل
+            </h3>
+
+            <div class="space-y-6">
+
+                <a href="mailto:maleksameh121@gmail.com"
+                   class="flex items-center gap-4 hover:text-indigo-300 transition">
+
+                    <div class="w-14 h-14 rounded-xl bg-indigo-600 flex items-center justify-center text-2xl">
+                        📧
+                    </div>
+
+                    <div>
+                        <h4 class="font-bold">Email</h4>
+                        <p class="text-gray-400">
+                            maleksameh121@gmail.com
+                        </p>
+                    </div>
+
+                </a>
+
+                <a href="tel:01117964294"
+                   class="flex items-center gap-4 hover:text-indigo-300 transition">
+
+                    <div class="w-14 h-14 rounded-xl bg-indigo-600 flex items-center justify-center text-2xl">
+                        📞
+                    </div>
+
+                    <div>
+                        <h4 class="font-bold">Phone</h4>
+                        <p class="text-gray-400">
+                            01117964294
+                        </p>
+                    </div>
+
+                </a>
+
+                <a href="https://wa.me/201117964294"
+                   target="_blank"
+                   class="flex items-center gap-4 hover:text-green-400 transition">
+
+                    <div class="w-14 h-14 rounded-xl bg-green-600 flex items-center justify-center text-2xl">
+                        💬
+                    </div>
+
+                    <div>
+                        <h4 class="font-bold">WhatsApp</h4>
+                        <p class="text-gray-400">
+                            Chat Now
+                        </p>
+                    </div>
+
+                </a>
+
+                <a href="https://github.com/maleksameh121-web"
+                   target="_blank"
+                   class="flex items-center gap-4 hover:text-indigo-300 transition">
+
+                    <div class="w-14 h-14 rounded-xl bg-gray-800 flex items-center justify-center text-2xl">
+                        💻
+                    </div>
+
+                    <div>
+                        <h4 class="font-bold">GitHub</h4>
+                        <p class="text-gray-400">
+                            github.com/maleksameh121-web
+                        </p>
+                    </div>
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- Contact Form -->
+        <div class="glass rounded-3xl p-8">
+
+            <h3 class="text-2xl font-bold text-indigo-300 mb-8">
+                أرسل رسالة
+            </h3>
+
+<form id="contactForm">
+
+    <input
+        id="name"
+        type="text"
+        placeholder="الاسم"
+        required
+        class="w-full mb-5 bg-[#111827] border border-gray-700 rounded-xl px-5 py-4 outline-none focus:border-indigo-500">
+
+    <input
+        id="email"
+        type="email"
+        placeholder="البريد الإلكتروني"
+        required
+        class="w-full mb-5 bg-[#111827] border border-gray-700 rounded-xl px-5 py-4 outline-none focus:border-indigo-500">
+
+    <textarea
+        id="message"
+        rows="6"
+        placeholder="اكتب رسالتك..."
+        required
+        class="w-full mb-5 bg-[#111827] border border-gray-700 rounded-xl px-5 py-4 outline-none focus:border-indigo-500"></textarea>
+
+    <button
+        type="submit"
+        class="w-full bg-indigo-600 hover:bg-indigo-500 py-4 rounded-xl font-bold transition">
+
+        🚀 إرسال الرسالة
+
+    </button>
+
+</form>
+        </div>
+
+    </div>
+
+</section>
+
     <!-- EDUCATION -->
     <section class="max-w-5xl mx-auto px-4 sm:px-6 mt-16">
 
@@ -762,10 +1369,412 @@ html{
 
     </section>
 
-    <!-- FOOTER -->
-    <footer class="text-center text-gray-500 text-sm mt-20 pb-8 px-4">
-        © 2026 مالك سامح — Web Developer
-    </footer>
+<!-- FOOTER -->
+<footer class="mt-24 border-t border-white/10">
+
+    <div class="max-w-7xl mx-auto px-6 py-12">
+
+        <div class="grid md:grid-cols-3 gap-10">
+
+            <!-- Logo -->
+            <div>
+
+                <h2 class="text-3xl font-black gradient">
+                    Malek Sameh
+                </h2>
+
+                <p class="text-gray-400 mt-4 leading-8">
+                    Front-End Developer متخصص في إنشاء المواقع والمنصات التعليمية
+                    الحديثة باستخدام أحدث التقنيات.
+                </p>
+
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+
+                <h3 class="text-xl font-bold mb-5 text-indigo-300">
+                    روابط سريعة
+                </h3>
+
+                <ul class="space-y-3">
+
+                    <li><a href="#home" class="hover:text-indigo-400 transition">الرئيسية</a></li>
+
+                    <li><a href="#about" class="hover:text-indigo-400 transition">نبذة عني</a></li>
+
+                    <li><a href="#projects" class="hover:text-indigo-400 transition">المشاريع</a></li>
+
+                    <li><a href="#contact" class="hover:text-indigo-400 transition">تواصل معي</a></li>
+
+                </ul>
+
+            </div>
+
+            <!-- Contact -->
+            <div>
+
+                <h3 class="text-xl font-bold mb-5 text-indigo-300">
+                    تواصل معي
+                </h3>
+
+                <div class="space-y-4">
+
+                    <a href="mailto:maleksameh121@gmail.com"
+                    class="block hover:text-indigo-400 transition">
+
+                        📧 maleksameh121@gmail.com
+
+                    </a>
+
+                    <a href="tel:01117964294"
+                    class="block hover:text-indigo-400 transition">
+
+                        📞 01117964294
+
+                    </a>
+
+                    <a href="https://wa.me/201117964294"
+                    target="_blank"
+                    class="block hover:text-green-400 transition">
+
+                        💬 WhatsApp
+
+                    </a>
+
+                    <a href="https://github.com/maleksameh121-web"
+                    target="_blank"
+                    class="block hover:text-indigo-400 transition">
+
+                        💻 GitHub
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="border-t border-white/10 mt-10 pt-8 text-center">
+
+            <p class="text-gray-500">
+
+                Made with ❤️ by <span class="gradient font-bold">Malek Sameh</span>
+
+            </p>
+
+            <p class="text-gray-600 mt-2">
+
+                © 2026 All Rights Reserved.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<script>
+// ==========================
+// Animated Counter
+// ==========================
+const counters = document.querySelectorAll(".counter");
+
+if (counters.length > 0) {
+
+    const observer = new IntersectionObserver((entries) => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                const counter = entry.target;
+                const target = parseInt(counter.dataset.target);
+
+                let count = 0;
+                const increment = Math.max(1, Math.ceil(target / 100));
+
+                const updateCounter = () => {
+
+                    count += increment;
+
+                    if (count < target) {
+
+                        counter.textContent = count;
+                        requestAnimationFrame(updateCounter);
+
+                    } else {
+
+                        counter.textContent =
+                            target === 100 ? "100%" : target + "+";
+
+                    }
+
+                };
+
+                updateCounter();
+
+                observer.unobserve(counter);
+
+            }
+
+        });
+
+    }, {
+        threshold: 0.5
+    });
+
+    counters.forEach(counter => observer.observe(counter));
+
+}
+
+
+// ==========================
+// Contact Form → WhatsApp
+// ==========================
+const form = document.getElementById("contactForm");
+const success = document.getElementById("successMessage");
+
+if (form && success) {
+
+    form.addEventListener("submit", function (e) {
+
+        e.preventDefault();
+
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const message = document.getElementById("message").value.trim();
+
+        const text = `السلام عليكم،
+
+لدي رسالة جديدة من موقع البورتفوليو.
+
+👤 الاسم:
+${name}
+
+📧 البريد الإلكتروني:
+${email}
+
+📝 الرسالة:
+${message}`;
+
+        success.classList.remove("opacity-0", "invisible");
+
+        setTimeout(() => {
+
+            window.open(
+                `https://wa.me/201117964294?text=${encodeURIComponent(text)}`,
+                "_blank"
+            );
+
+            success.classList.add("opacity-0", "invisible");
+
+            form.reset();
+
+        }, 1800);
+
+    });
+
+}
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const form = document.getElementById("contactForm");
+
+    if (!form) return;
+
+    form.addEventListener("submit", function(e){
+
+        e.preventDefault();
+
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const message = document.getElementById("message").value;
+
+        const text =
+`السلام عليكم
+
+👤 الاسم: ${name}
+
+📧 البريد: ${email}
+
+📝 الرسالة:
+${message}`;
+
+        window.open(
+            "https://wa.me/201117964294?text=" +
+            encodeURIComponent(text),
+            "_blank"
+        );
+
+    });
+
+});
+</script>
+
+<script>
+// ==========================
+// Typing Effect
+// ==========================
+const words = [
+    "Web Developer",
+    "Frontend Developer",
+    "React Developer",
+    "UI Developer"
+];
+
+let wordIndex = 0;
+let charIndex = 0;
+let deleting = false;
+
+const typing = document.getElementById("typing");
+
+function typeEffect() {
+
+    const current = words[wordIndex];
+
+    if (!deleting) {
+
+        typing.textContent = current.substring(0, charIndex++);
+        
+        if (charIndex > current.length) {
+            deleting = true;
+            setTimeout(typeEffect, 1500);
+            return;
+        }
+
+    } else {
+
+        typing.textContent = current.substring(0, charIndex--);
+
+        if (charIndex < 0) {
+            deleting = false;
+            wordIndex = (wordIndex + 1) % words.length;
+        }
+
+    }
+
+    setTimeout(typeEffect, deleting ? 50 : 120);
+}
+
+typeEffect();
+</script>
+
+<script>
+// ==========================
+// Loading Screen
+// ==========================
+
+window.addEventListener("load", () => {
+
+    const loader = document.getElementById("loader");
+
+    setTimeout(() => {
+
+        loader.style.opacity = "0";
+
+        setTimeout(() => {
+
+            loader.style.display = "none";
+
+        },700);
+
+    },1200);
+
+});
+</script>
+
+<script>
+// ==========================
+// Scroll To Top
+// ==========================
+
+const scrollBtn = document.getElementById("scrollTopBtn");
+
+window.addEventListener("scroll", () => {
+
+    if (window.scrollY > 300) {
+
+        scrollBtn.classList.remove("opacity-0","invisible");
+
+    } else {
+
+        scrollBtn.classList.add("opacity-0","invisible");
+
+    }
+
+});
+
+scrollBtn.addEventListener("click", () => {
+
+    window.scrollTo({
+
+        top:0,
+        behavior:"smooth"
+
+    });
+
+});
+
+// ==========================
+// Dark / Light Mode
+// ==========================
+
+const themeBtn = document.getElementById("themeToggle");
+
+// تحميل الوضع المحفوظ
+if(localStorage.getItem("theme") === "light"){
+
+    document.body.classList.add("light-mode");
+    themeBtn.innerHTML = "☀️";
+
+}
+
+themeBtn.addEventListener("click",()=>{
+
+    document.body.classList.toggle("light-mode");
+
+    if(document.body.classList.contains("light-mode")){
+
+        localStorage.setItem("theme","light");
+        themeBtn.innerHTML="☀️";
+
+    }else{
+
+        localStorage.setItem("theme","dark");
+        themeBtn.innerHTML="🌙";
+
+    }
+
+});
+</script>
+
+
+
+<div id="successMessage"
+class="fixed inset-0 bg-black/70 flex items-center justify-center opacity-0 invisible transition-all duration-300 z-50">
+
+    <div class="glass p-8 rounded-3xl text-center max-w-sm w-[90%]">
+
+        <div class="text-6xl mb-4">✅</div>
+
+        <h3 class="text-2xl font-bold text-green-400 mb-3">
+            تم بنجاح
+        </h3>
+
+        <p class="text-gray-300">
+            جاري تحويلك إلى واتساب...
+        </p>
+
+    </div>
+
+</div>
+
+
 
 </body>
 </html>
